@@ -248,3 +248,5 @@ waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01)
 $
 
 This is my git test-abc
+
+This is my 2nd change-xyz
