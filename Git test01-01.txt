@@ -1,0 +1,250 @@
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   test3.csv
+
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git commit -m "text commit"
+[master (root-commit) 12a55ec] text commit
+ Committer: Wayne Lao <waynel@sccwrp.org>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 43 insertions(+)
+ create mode 100644 test3.csv
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git log
+commit 12a55ecf282a6f18642f7de5c021fe7259e4c82a (HEAD -> master)
+Author: Wayne Lao <waynel@sccwrp.org>
+Date:   Tue Nov 24 00:09:16 2020 -0800
+
+    text commit
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git branch
+* master
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git branch test001A
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git branch
+* master
+  test001A
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git checkout
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git branch
+* master
+  test001A
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git branch test001A
+fatal: A branch named 'test001A' already exists.
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git checkout test001A
+Switched to branch 'test001A'
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (test001A)
+$ git branch
+  master
+* test001A
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (test001A)
+$ git merge test001A
+Already up to date.
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (test001A)
+$ git checkout master
+Switched to branch 'master'
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git merge test001A
+Already up to date.
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git branch -d test001A
+Deleted branch test001A (was 12a55ec).
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git branch test001b
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git branch
+* master
+  test001b
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (master)
+$ git checkout test001b
+Switched to branch 'test001b'
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (test001b)
+$ git branch test001c
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (test001b)
+$ git tag v01
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (test001b)
+$ git tag
+v01
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning (test001b)
+$ git checkout v01
+Note: switching to 'v01'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 12a55ec text commit
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$ ssh
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command]
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Waynel/.ssh/id_rsa):
+Created directory '/c/Users/Waynel/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Waynel/.ssh/id_rsa
+Your public key has been saved in /c/Users/Waynel/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:Zp/tIB1Oh7cLWYB0kwUAZoJ+rDjI7pj83epYiIxcRHE waynel@WayneTP
+The key's randomart image is:
++---[RSA 3072]----+
+|   +oE+.o.++.    |
+|  o .+ . o..     |
+| . o    . .      |
+|  o o      o     |
+|o. +    S + +    |
+|B.+ .  o = O .   |
+|o= . .  . O o    |
+|oo  + .  . + .   |
+|+o.o.+..    o    |
++----[SHA256]-----+
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$ ssh key
+
+
+
+
+ssh: connect to host key port 22: Connection timed out
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.255.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Host key verification failed.
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Waynel/.ssh/id_rsa):
+/c/Users/Waynel/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Waynel/.ssh/id_rsa
+Your public key has been saved in /c/Users/Waynel/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:6cw7i4gPP6dc2iOyPLZU0SbedrVtZtjnwabd4i1MMuk waynel@WayneTP
+The key's randomart image is:
++---[RSA 3072]----+
+|                 |
+|     .           |
+|    o o   .      |
+|   . =   o = .   |
+|    o o S o *.=  |
+|   . . =   ++*.o |
+|  o   . +  ..=+ .|
+| o+=o=o...  E.oo |
+| .=*B=o.oo    ...|
++----[SHA256]-----+
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.255.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,192.30.255.113' (RSA) to the list of known hosts.
+Hi Wayne102020! You've successfully authenticated, but GitHub does not provide shell access.
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$ git clone https://github.com/Wayne102020/20201123gitxuexi.git
+Cloning into '20201123gitxuexi'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (7/7), done.
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$ git status
+HEAD detached at v01
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        20201123gitxuexi/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+waynel@WayneTP MINGW64 /c/Data/work1/lab stuffs/R User Group/Git learning ((v01))
+$
+
+This is my git test-abc
